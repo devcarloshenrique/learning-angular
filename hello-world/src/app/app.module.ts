@@ -5,12 +5,14 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { TablePriceComponent } from './table-price/table-price.component';
 import { CursosModule } from './cursos/cursos.module';
+import { DataBindingComponent } from './data-binding/data-binding.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ComponenteTesteComponent,
-    TablePriceComponent
+    TablePriceComponent,
+    DataBindingComponent
   ],
   imports: [
     BrowserModule,
