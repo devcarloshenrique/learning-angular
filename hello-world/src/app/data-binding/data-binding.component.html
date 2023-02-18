@@ -1,5 +1,5 @@
-<section>
-    <article>
+<section class="mt-4 ml-4">
+    <!-- <article>
         <h3>Interpolação</h3>
         <p>String redenrzada por interpolação: {{ url }}</p>
         <p>Resultado de 1 + 1 é: {{ 1 + 1}}</p>
@@ -11,5 +11,46 @@
         <img src={{urlImagem}} alt="">
         <img [src]="urlImagem" alt="">
         <img bind-src="urlImagem" alt="">
+    </article> -->
+
+    <article>
+        <h3>Class e Style Binding</h3>
+        <div>
+            Selecione uma classe:
+            <select #class (change)="0">
+                <option value="alert-success">Sucesso</option>
+                <option value="alert-info">Info</option>
+                <option value="alert-warning">Alerta</option>
+                <option value="alert-danger">Erro</option>
+            </select>
+            <br><br>
+
+            <div class="alert {{class.value}}">
+                Texto colorido conforme valor combobox
+            </div>
+
+            <div class="alert" role="alert"
+                [class.alert-success]="class.value == 'alert-success'">
+                Sucesso
+            </div>
+            <div class="alert" role="alert"
+                [class.alert-info]="class.value == 'alert-info'">
+                Info
+            </div>
+            <div class="alert" role="alert"
+                [class.alert-warning]="class.value == 'alert-warning'">
+                Alerta
+            </div>
+            <div class="alert" role="alert"
+                [class.alert-danger]="class.value == 'alert-danger'">
+                Erro
+            </div>
+
+            <div class="alert alert-danger" role="alert"
+                [style.display]="class.value == 'alert-danger' ? 'block' : 'none'">
+                Erro
+            </div>
+        </div>        
     </article>
+    
 </section>
