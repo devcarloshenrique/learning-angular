@@ -8,12 +8,15 @@ import { VirtualTimeScheduler } from 'rxjs';
 })
 
 
-
 export class DataBindingComponent {
 
   url : string = "http://curso-angular.com";
   cursoAngular: boolean = true;
   urlImagem : string =  "http://lorempixel.com.br/largura/400/200?1";
+  valorAtual: string = '';
+  valorSalvo: string = '';
+
+  isMouseOver: boolean = false;
 
   getValor() {
     return 1;
@@ -21,6 +24,22 @@ export class DataBindingComponent {
 
   getCurtirCurso(){
     return true;
+  }
+
+  botaoClicado() {
+    return alert("Botão clicado");
+  }
+
+  onKeyUp(event: KeyboardEvent) {
+    this.valorAtual += (<HTMLInputElement>event?.target).value;
+  }
+
+  salvarValor(valor: string){          
+    this.valorSalvo = valor;
+  }
+
+  onMouseOverOut() {
+    this.isMouseOver = !this.isMouseOver;
   }
 
   constructor () { }  
