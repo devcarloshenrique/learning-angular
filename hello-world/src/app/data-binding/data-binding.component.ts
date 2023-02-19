@@ -18,6 +18,13 @@ export class DataBindingComponent {
 
   isMouseOver: boolean = false;
 
+  nome: string = 'Teste';
+
+  pessoa : any = {
+    nome: 'Carlos',
+    idade: 22
+  }
+
   getValor() {
     return 1;
   }
