@@ -7,13 +7,15 @@ import { AppComponent } from './app.component';
 import { TablePriceComponent } from './table-price/table-price.component';
 import { CursosModule } from './cursos/cursos.module';
 import { DataBindingComponent } from './data-binding/data-binding.component';
+import { InputPropertyComponent } from './input-property/input-property.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ComponenteTesteComponent,
     TablePriceComponent,
-    DataBindingComponent
+    DataBindingComponent,
+    InputPropertyComponent
   ],
   imports: [
     BrowserModule,

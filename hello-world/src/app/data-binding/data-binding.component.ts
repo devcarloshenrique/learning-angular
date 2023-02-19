@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { VirtualTimeScheduler } from 'rxjs';
 
 @Component({
   selector: 'app-data-binding',
@@ -15,10 +14,13 @@ export class DataBindingComponent {
   urlImagem : string =  "http://lorempixel.com.br/largura/400/200?1";
   valorAtual: string = '';
   valorSalvo: string = '';
+  
+  nome: string = 'Teste';
 
   isMouseOver: boolean = false;
 
-  nome: string = 'Teste';
+  nomeDoCurso: string = 'Angular';
+  
 
   pessoa : any = {
     nome: 'Carlos',
